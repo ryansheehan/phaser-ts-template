@@ -1,6 +1,7 @@
 import { Configuration } from 'webpack';
 import * as path from 'path';
 
+const { DefinePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -60,7 +61,11 @@ const config: Configuration = {
         from: 'favicons/*',
         flatten: true
       }
-    ])
+    ]),
+    new DefinePlugin({
+      'CANVAS_RENDERER': JSON.stringify(true),
+      'WEBGL_RENDERER': JSON.stringify(true)
+    })
   ],
 
   output: {
