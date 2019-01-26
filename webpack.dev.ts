@@ -9,6 +9,9 @@ const dev: Configuration = {
   devServer: {
     contentBase: './dist'
   },
+  output: {
+    filename: '[name].bundle.js',
+  }
 };
 
 const config: Configuration = merge(common, dev);

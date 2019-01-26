@@ -7,6 +7,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const config: Configuration = {
   entry: './src/main.ts',
 
+  resolve: {
+    extensions: ['.ts', '.js'],
+  },
+
   module: {
     rules: [
       {
@@ -30,7 +34,6 @@ const config: Configuration = {
   ],
 
   output: {
-    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   }
 }
