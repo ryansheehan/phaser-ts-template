@@ -1,0 +1,5 @@
+# third party libs
+node_modules/
+
+# build output
+dist/
