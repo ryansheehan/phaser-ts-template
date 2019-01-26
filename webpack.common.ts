@@ -14,6 +14,12 @@ const config: Configuration = {
 
   module: {
     rules: [
+      // manage shaders
+      {
+        test: [ /\.vert$/, /\.frag$/ ],
+        use: 'raw-loader'
+      },
+
       // manage fonts
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
