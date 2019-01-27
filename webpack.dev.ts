@@ -2,6 +2,7 @@ import { Configuration } from 'webpack';
 import common from './webpack.common';
 
 const merge = require('webpack-merge');
+const { DefinePlugin } = require('webpack');
 
 const dev: Configuration = {
   mode: 'development',
@@ -11,7 +12,12 @@ const dev: Configuration = {
   },
   output: {
     filename: '[name].bundle.js',
-  }
+  },
+  plugins: [
+    new DefinePlugin({
+      PRODUCTION: JSON.stringify(false)
+    })
+  ]
 };
 
 const config: Configuration = merge(common, dev);

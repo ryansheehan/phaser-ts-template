@@ -71,6 +71,6 @@ const config: Configuration = {
   output: {
     path: path.resolve(__dirname, 'dist'),
   }
-}
+};
 
 export default config;

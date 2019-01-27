@@ -1,16 +1,20 @@
 {
-  "name": "game-template",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "phaser-game-template",
+  "version": "0.1.0",
+  "description": "A project template for PhaserJS with Typescript",
+  "private": true,
   "scripts": {
     "start": "cross-env TS_NODE_PROJECT=\"tsconfig.webpack.json\" webpack-dev-server --config webpack.dev.ts",
     "build": "cross-env TS_NODE_PROJECT=\"tsconfig.webpack.json\" webpack --config webpack.prod.ts",
     "build:dev": "cross-env TS_NODE_PROJECT=\"tsconfig.webpack.json\" webpack --config webpack.dev.ts",
-    "serve:pwa": "http-server dist"
+    "serve:pwa": "http-server dist --port 8008",
+    "tslint": "tslint"
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "phaser": "^3.15.1"
+  },
   "devDependencies": {
     "@types/clean-webpack-plugin": "^0.1.2",
     "@types/copy-webpack-plugin": "^4.4.2",
@@ -39,8 +43,5 @@
     "webpack-dev-server": "^3.1.14",
     "webpack-merge": "^4.2.1",
     "workbox-webpack-plugin": "^3.6.3"
-  },
-  "dependencies": {
-    "phaser": "^3.15.1"
   }
 }

@@ -3,6 +3,7 @@ import common from './webpack.common';
 
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const merge = require('webpack-merge');
+const { DefinePlugin } = require('webpack');
 
 const prod: Configuration = {
   mode: 'production',
@@ -13,6 +14,9 @@ const prod: Configuration = {
     new WorkboxPlugin.GenerateSW({
       clientsClaim: true,
       skipWaiting: true
+    }),
+    new DefinePlugin({
+      PRODUCTION: JSON.stringify(true)
     })
   ]
 };
