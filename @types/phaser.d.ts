@@ -1,3 +1,5 @@
+// https://github.com/photonstorm/phaser3-docs/tree/master/typescript
+
 declare type CallCallback = (item: Phaser.GameObjects.GameObject)=>void;
 
 declare type GridAlignConfig = {

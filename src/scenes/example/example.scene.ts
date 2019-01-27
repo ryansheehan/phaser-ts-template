@@ -2,7 +2,7 @@ import * as Phaser from 'phaser';
 
 export class ExampleScene extends Phaser.Scene {
   constructor(config: Phaser.Scenes.Settings.Config) {
-    super(config)
+    super(config);
   }
 
   preload() {
@@ -19,7 +19,7 @@ export class ExampleScene extends Phaser.Scene {
       ease: 'Power2',
       yoyo: true,
       loop: -1
-    }
+    };
 
     this.tweens.add(tweenConfig);
   }
